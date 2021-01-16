@@ -1,0 +1,148 @@
+.card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+}
+
+svg.material-icons {
+    height: 24px;
+    width: auto;
+}
+
+.card svg.material-icons path {
+    fill: #888;
+}
+
+.card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+}
+
+.card.card.highlight-card span {
+    margin-left: 60px;
+}
+
+table {
+    border: 0;
+    border-collapse:collapse;
+    border-style: none;
+    border-spacing: 0mm;
+    width: 600px;
+}
+
+.artist-title {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: chocolate;
+    color:royalblue;
+}
+
+.artist-text {
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: #888;
+}
+
+.tr-card:hover {
+    background-color: #bebbf7;
+}
+
+th {
+    height: 70px;
+    border: skyblue;
+}
+
+td {
+ padding: 0;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+input {
+    width: 150px;
+    padding: 15px;
+    margin: 4px;
+    border:#4CAF50;
+    background: #f1f1f1;
+    float: left;
+}
+
+.button-page {
+    background-color: #2522c7;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: wavy;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 4px;
+    margin-top: 10px;
+    float: left;
+}
+
+.button-page-disabled {
+    background-color: #828288ec;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: wavy;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 4px;
+    margin-top: 10px;
+    float: left;
+}
+
+.margin-more {
+    margin-left: 270px;
+}
+
+.center-all {
+    align-content: center;
+    text-align: center;
+}
+
+table {
+    margin:0 auto;
+}
+
+.page-align {
+    float: left;
+    margin-left: 10px;
+}
+
+#pageNumber {
+    font-size: x-large;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+}

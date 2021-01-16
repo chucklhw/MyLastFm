@@ -1,0 +1,22 @@
+<div class="center-all">
+    <h1>Artist: {{ artistName }}</h1>
+</div>
+<br>
+<table>
+    <tr>
+        <th class="artist-title">Artist Name</th>
+        <th class="artist-title">Play Count</th>
+    </tr>
+    <tr *ngFor="let topTrack of topTrackList" class="tr-card">
+        <td class="artist-text">{{ topTrack.trackName }}</td>
+        <td class="center-all">{{ topTrack.playCount }}</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="page-align">
+                <button (click)="moreTracks()" [disabled]="!hasMore" 
+                [ngClass]="{'button-page-disabled margin-more':!hasMore, 'button-page margin-more':hasMore}">More</button>
+            </div>
+        </td>
+    </tr>
+</table>

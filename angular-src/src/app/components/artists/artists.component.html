@@ -1,0 +1,39 @@
+<div [hidden]=isHiding>
+    <div>
+        <label for="countryName" class="lable-text">Country Name: </label>
+        <div>
+        <input id="countryName" [(ngModel)]="countryName">
+        </div>
+        <button (click)="getTopArtists()" class="button-search">search</button>
+    </div>
+    <br><br><br><br><br><br>
+    <table>
+        <tr>
+            <th class="artist-title">Artist Name</th>
+            <th>Small Thumbnail</th>
+            <th>Medium Thumbnail</th>
+            <th>Large Thumbnail</th>
+        </tr>
+        <tr *ngFor="let artist of artistList" class="tr-card">
+            <td class="artist-text">{{ artist.artistName }}</td>
+            <td class="center-all"><a href="#" (click)="gotoTrackPage(artist.artistName)"><img src="{{ artist.smallImage }}"></a></td>
+            <td class="center-all"><a href="#" (click)="gotoTrackPage(artist.artistName)"><img src="{{ artist.mediumImage }}"></a></td>
+            <td class="center-all"><a href="#" (click)="gotoTrackPage(artist.artistName)"><img src="{{ artist.largeImage }}"></a></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="page-align">
+                    <button href="#" (click)="previousPage()" [disabled]="isFirstPage" 
+                    [ngClass]="{'button-page-disabled':isFirstPage, 'button-page':!isFirstPage, 'margin-more': true}">previous page</button>
+                </div>
+                <div class="page-align">
+                    <span id="pageNumber">{{ pageNumber }}</span>
+                </div>
+                <div class="page-align">
+                    <button href="#" (click)="nextPage()" [disabled]="isLastPage" 
+                     [ngClass]="{'button-page-disabled':isLastPage, 'button-page':!isLastPage}">next page</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
