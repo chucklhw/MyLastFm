@@ -20,7 +20,7 @@ public class LastFmController {
     private LastFmService lastFmService;
 
     @GetMapping("/getTopArtists")
-    public Flux<Artist> gTestInteger(@RequestParam("country") String country,
+    public Flux<Artist> getTopArtists(@RequestParam("country") String country,
                                      @RequestParam(value = "pageNumber", required = false) Integer pageNumber) {
         if(pageNumber == null) {
             pageNumber = 1;
